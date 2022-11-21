@@ -11,7 +11,7 @@ def createimage(w,h):
 	return img
 
 def main():
-	data = np.array(np.load('Detections.npy'))[0:10,0:150,0:150]
+	data = np.array(np.load('Detections.npy'))[0:10,0:150,0:150] # [obj_id,frames_id,[x,y]]
 	tracker = Tracker(150, 30, 5)
 	skip_frame_count = 0
 	track_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0),
